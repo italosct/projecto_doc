@@ -1,0 +1,125 @@
+
+<Raiz>:
+
+     canvas.before:
+          Color:
+               rgba: (1,1,1,1)
+          Rectangle:
+               pos: self.pos
+               size:self.size
+
+     Label:
+          text: "Pesquisa de doutorado \nPesquisador: Ítalo Siqueira de C. Teixeira \n\nClique no botão abaixo para seguir para instrução da atividade "
+          valign: 'middle'
+          color: "000000"
+          pos: dp(10), dp (80)
+          font_size: 24
+
+
+     Button:
+          on_release: root.on_press_btinst()
+          size_hint: None, None
+          size: dp(350), dp(50)
+          pos: dp(600), dp(270)
+          text: "Instrução"
+
+<TelaInst>:
+
+     canvas.before:
+          Color:
+               rgba: (1,1,1,1)
+          Rectangle:
+               pos: self.pos
+               size:self.size
+
+
+     Label:
+          text: "INSTRUÇÃO (...)"
+          id: instru
+          color: "000000"
+          pos: dp(10), dp (150)
+          font_size: 24
+
+     Button:
+          on_press: root.on_press_btini()
+          size_hint: None, None
+          size: dp(350), dp(50)
+          pos: dp(600), dp(270)
+          text: "Iniciar"
+          id: btini
+
+<TelaEst>:
+
+
+     canvas.before:
+          Color:
+               rgba: (1,1,1,1)
+          Rectangle:
+               pos: self.pos
+               size:self.size
+
+     Button:
+          id: est1
+          on_release: root.on_press_bt1()
+          size_hint: None, None
+          text: "Estímulo 1"
+          size: dp(250), dp(250)
+          pos: dp(250), dp(400)
+
+     Button:
+          id: est2
+          size_hint: None, None
+          size: dp(250), dp(250)
+          pos: dp(250), dp(60)
+          text: "Iniciar"
+
+     Button:
+          id: est3
+          size_hint: None, None
+          size: dp(250), dp(250)
+          pos: dp(1000), dp(400)
+          text: "Iniciar"
+
+     Button:
+          id: est4
+          size_hint: None, None
+          size: dp(250), dp(250)
+          pos: dp(1000), dp(60)
+          text: "Iniciar"
+
+
+<TelaIET>:
+
+     canvas.before:
+          Color:
+               rgba:(40/255, 40/255, 40/255, 93/255)
+          Rectangle:
+               pos: self.pos
+               size:self.size
+
+     Label:
+          text: "Aff!!!"
+          color: "000000"
+          pos: dp(10), dp (80)
+          font_size: 40
+
+
+     Button:
+          id: IET
+          on_release: root.reiniciar()
+          size_hint: None, None
+          text: "REINICIAR"
+          size: dp(250), dp(250)
+          pos: dp(250), dp(400)
+
+
+
+          ###  Image:
+          ###     source: if est1 'imagens/RC/FF1.png'
+          ###     size_hint: None, None
+          ###     width: 210
+          ###     height: 240
+          ###    center_x: self.parent.center_x
+          ###     center_y: self.parent.center_y
+
+          ###
